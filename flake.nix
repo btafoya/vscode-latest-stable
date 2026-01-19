@@ -34,7 +34,7 @@
 
               meta.mainProgram = "code";
             });
-          vscode = default;
+          vscode-latest-stable = default;
         };
       };
 
