@@ -32,9 +32,11 @@
 
               buildInputs = oldAttrs.buildInputs ++ [ pkgs.krb5 ];
 
-              runtimeDependencies = (oldAttrs.runtimeDependencies or [ ]) ++ [
-                pkgs.webkitgtk_4_1
-                pkgs.libsoup_3
+              # MSAL runtime has optional webkit/libsoup deps for native auth
+              # VS Code falls back to browser-based auth when unavailable
+              autoPatchelfIgnoreMissingDeps = [
+                "libwebkit2gtk-4.1.so.0"
+                "libsoup-3.0.so.0"
               ];
 
               meta.mainProgram = "code";
