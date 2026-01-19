@@ -1,6 +1,6 @@
-# 🌙 Visual Studio Code Insiders
+# 🌙 Latest Visual Studio Code Stable
 
-A Nix flake for conveniently running the latest build of VS Code Insiders. The flake is automatically updated every 24 hours.
+A Nix flake for conveniently running the latest build of VS Code Stable. The flake is automatically updated every 24 hours.
 
 ## ⚠️ Reproducibility warning
 
@@ -11,6 +11,6 @@ This flake fetches the binary from a non-reproducible source and *will* break on
 Simply run the following command in your shell:
 
 ```bash
-nix run github:btafoya/vscode
+nix run github:btafoya/vscode-latest-stable
 ```
 
