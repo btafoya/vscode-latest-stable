@@ -32,7 +32,7 @@
 
               buildInputs = oldAttrs.buildInputs ++ [ pkgs.krb5 ];
 
-              runtimeDependencies = oldAttrs.runtimeDependencies or [ ] ++ [
+              runtimeDependencies = (oldAttrs.runtimeDependencies or [ ]) ++ [
                 pkgs.webkitgtk_4_1
                 pkgs.libsoup_3
               ];
